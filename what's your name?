@@ -1,0 +1,7 @@
+def split_and_join(line):
+    newline = line.split()
+    newline = "-".join(newline)
+    return newline
+    # write your code here
+line = input()
+print(split_and_join(line))
