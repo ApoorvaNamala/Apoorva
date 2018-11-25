@@ -1,0 +1,7 @@
+def modfunc(n):
+    return (n*n%(10**9+7))
+case = int(input())
+for k in range(0, case+1):
+    num = int(input())
+    if num>= 1 and num <= (10**16):
+        print(modfunc(num))
