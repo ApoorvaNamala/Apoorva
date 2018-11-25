@@ -1,0 +1,21 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+def arrange(arr):
+    lower = [x for x in arr if x >= 'a' and x <= 'z']
+    lower.sort()
+    upper = [x for x in arr if x >= 'A' and x <= 'Z']
+    upper.sort()
+    num = [int(x) for x in arr if x.isdigit()]
+    odd = [x for x in num if x%2 != 0]
+    odd.sort()
+    even = [x for x in num if x%2 == 0]
+    even.sort()
+    string = lower + upper + odd + even
+    string = combine(string)
+    return string
+def combine(s):
+    s = ''.join(str(x) for x in s)
+    return s;
+    
+arr = raw_input()
+print(arrange(arr))
+
