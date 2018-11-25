@@ -1,0 +1,16 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+def happiness(arr,setA,setB):
+    h = 0
+    for i in arr:
+        if i in setA:
+            h = h + 1
+        if i in setB:
+            h = h - 1
+    return h
+n, m = input(). split(' ')
+arr = input().split(' ')
+setA = set(input().split(' '))
+setB = set(input().split(' '))
+if int(n) <= 10**5 and int(m) <= 10**5:
+    print(happiness(arr,setA,setB))
+
