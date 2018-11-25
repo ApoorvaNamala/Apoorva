@@ -1,0 +1,14 @@
+def handshake(n):
+    if n == 1:
+        return 0
+    else:
+        i = 1
+        h = 0
+        while i != n:
+            h = h + i
+            i = i + 1
+        return h
+t = int(input())
+for i in range (0, t+1):
+    n = int(input())
+    print(handshake(n))
